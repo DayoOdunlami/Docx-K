@@ -196,4 +196,4 @@ CREATE POLICY "Service role full access section_versions" ON section_versions FO
 CREATE POLICY "Service role full access embeddings" ON embeddings FOR ALL USING (auth.role() = 'service_role');
 CREATE POLICY "Service role full access assets" ON assets FOR ALL USING (auth.role() = 'service_role');
 CREATE POLICY "Service role full access chat_cache" ON chat_cache FOR ALL USING (auth.role() = 'service_role');
-CREATE POLICY "Service role full access analytics_events" ON analytics_events FOR ALL USING (auth.role() = 'service_role';
+CREATE POLICY "Service role full access analytics_events" ON analytics_events FOR ALL USING (auth.role() = 'service_role');

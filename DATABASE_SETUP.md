@@ -12,9 +12,15 @@ Your Supabase project is configured and ready! Follow these steps to create the 
 
 ### Step 2: Run the Schema Migration
 
+**Option A: Complete Migration (Recommended)**
 1. Copy the entire contents of `supabase/migrations/001_initial_schema.sql`
 2. Paste it into the SQL Editor
 3. Click **Run** to execute the migration
+
+**Option B: Step-by-Step (If you encounter errors)**
+1. First run: `supabase/migrations/001_extensions_only.sql`
+2. Then run: `supabase/migrations/002_tables_only.sql`
+3. Finally run the remaining parts from the main migration file
 
 This will create:
 - ✅ All required PostgreSQL extensions (pgvector, pg_trgm, uuid-ossp)
@@ -22,6 +28,8 @@ This will create:
 - ✅ Indexes for optimal performance
 - ✅ Triggers for automatic updates
 - ✅ Row Level Security policies
+
+**Note**: The SQL file has been fixed to resolve syntax errors. If you see any errors, try the step-by-step approach.
 
 ### Step 3: Verify Setup
 
